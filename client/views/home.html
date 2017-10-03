@@ -1,0 +1,63 @@
+<template name="home">
+	<!-- Wrapper -->
+	<div id="top">
+
+<!-- Header -->
+			<header id="header">
+				<div class="content">
+					<h1><a href="#">Tap Artists</a></h1>
+					<p>Providing Advertising Creative for Snap<br />
+					Mobile Focused Animations and Videos</p>
+					<p>Enter your email to be at the front of the line
+						<!--
+						<li><a href="#" class="button special icon fa-download">Download</a></li>
+						<li><a href="#one" class="button icon fa-chevron-down scrolly">Learn More</a></li>
+						-->
+					</p>
+					
+					<form method="post" action="#" id="request-form">
+					<ul class="actions">
+					<li>
+                          <input type="email" name="email" id="email" class="email" value="" placeholder="Email" />
+                    </li>
+                    <li>
+                    	
+                    	<!--
+                    	<a href="#" class="button special icon fa-sign-in">Sign Up</a>
+						-->
+
+                    	<a href="#" class="button special icon fa-sign-in" onclick="$(this).closest('form').submit(); return false;">Sign Up</a>
+
+                    	<!--
+                    	<input type="submit" value="Sign Up" class="button special icon fa-sign-in" />
+                    	-->
+                    </li>
+                    </ul>
+                    </form>
+                    
+				</div>
+				<div class="image phone"><div class="inner"><img src="images/tapartists-logo.png" alt="" /></div></div>
+			</header>
+
+		<!-- One -->
+			<section id="one" class="wrapper style2 special">
+				<header class="major">
+					{{#if showForm }}
+
+					<h2>Be the first to know</h2>
+
+					{{else}} 
+
+					<h2>Thank You!  We'll be in touch shortly.</h2>
+
+					{{/if}} 
+				</header>
+				<ul class="icons major">
+					<li><span class="icon fa-camera-retro"><span class="label">Shoot</span></span></li>
+					<li><span class="icon fa-refresh"><span class="label">Process</span></span></li>
+					<li><span class="icon fa-cloud"><span class="label">Upload</span></span></li>
+				</ul>
+			</section>
+
+	</div>
+</template>
