@@ -52,6 +52,8 @@ Template.home.events({
                     email: email
                 });
 
+                gtag_report_conversion;
+
                 template.showForm.set( false );
                 location.href = '#one';
             }
