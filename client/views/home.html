@@ -15,6 +15,7 @@
 						-->
 					</p>
 					
+					{{#if showForm }}
 					<form method="post" action="#" id="request-form">
 					<ul class="actions">
 					<li>
@@ -34,6 +35,9 @@
                     </li>
                     </ul>
                     </form>
+                    {{else}} 
+                    <h2>Thank you!</h2>
+                    {{/if}}
                     
 				</div>
 				<div class="image phone"><div class="inner"><img src="images/tapartists-logo.png" alt="" /></div></div>
