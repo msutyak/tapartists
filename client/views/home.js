@@ -22,6 +22,11 @@ Template.home.onRendered(function(){
                 emailUnique: true,
                 minlength: 3,
                 maxlength: 255
+            },
+            name: {
+                required: true,
+                minlength: 3,
+                maxlength: 255
             }
         },
         messages: {
@@ -31,6 +36,10 @@ Template.home.onRendered(function(){
                 minlength: "Your email must be at least {0} characters.",
                 emailUnique: "That email has already been submitted.  Please enter a unique email!"
             },
+            name: {
+                required: "Please enter a name so we know how to address you.",
+                minlength: "Your name must be at least {0} characters."
+            }
         }
     });
 });
@@ -47,15 +56,17 @@ Template.home.events({
             if ($form.valid()) {
 
                 var email = $("#email").val();
+                var name = $("#name").val();
 
                 UserList.insert({
-                    email: email
+                    email: email,
+                    name: name
                 });
 
                 gtag_report_conversion;
 
                 template.showForm.set( false );
-                location.href = '#one';
+                location.href = '/download';
             }
         
             else {
